@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Newcamb FC Tracker</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    .paid { background-color: #d4edda; }
+    .unpaid { background-color: #f8d7da; }
+  </style>
+</head>
+<body>
+  <h1>Newcamb FC Payment Tracker</h1>
+
+  <label>New Match Date: <input type="date" id="matchDate" /></label>
+  <button onclick="createMatch()">Add Match</button>
+
+  <h3>Players</h3>
+  <ul id="playerList"></ul>
+
+  <h3>Matches</h3>
+  <select id="matchSelector" onchange="loadAttendance()"></select>
+
+  <table id="attendanceTable">
+    <thead>
+      <tr><th>Player</th><th>Paid?</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
